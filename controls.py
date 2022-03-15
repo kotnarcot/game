@@ -14,6 +14,16 @@ def events(gun):
                 gun.kup = True
             if event.key == pygame.K_s:
                 gun.kdown = True
+
+            if event.key == pygame.K_i:
+                gun.kright2 = True
+            if event.key == pygame.K_k:
+                gun.kleft2 = True
+            if event.key == pygame.K_j:
+                gun.kup2 = True
+            if event.key == pygame.K_l:
+                gun.kdown2 = True
+
         elif event.type == pygame.KEYUP:
             if event.key == pygame.K_d:
                 gun.kright = False
@@ -23,3 +33,12 @@ def events(gun):
                 gun.kup = False
             if event.key == pygame.K_s:
                 gun.kdown = False
+
+            if event.key == pygame.K_i:
+                gun.kright2 = False
+            if event.key == pygame.K_k:
+                gun.kleft2 = False
+            if event.key == pygame.K_j:
+                gun.kup2 = False
+            if event.key == pygame.K_l:
+                gun.kdown2 = False

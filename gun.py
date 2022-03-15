@@ -19,11 +19,11 @@ class Gun():
         self.screen.blit(self.image, self.rect)
 
     def update_gun(self):
-        if self.kright == True:
+        if self.kright == True and self.rect.right<self.screen_rect.right:
             self.rect.centerx += 1
-        if self.kleft == True:
+        if self.kleft == True and self.rect.left>0:
             self.rect.centerx -= 1
-        if self.kup == True:
+        if self.kup == True and self.rect.height<600:
             self.rect.bottom -= 1
-        if self.kdown == True:
+        if self.kdown == True and self.rect.bottom<self.screen_rect.bottom:
             self.rect.bottom += 1

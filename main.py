@@ -16,6 +16,5 @@ def run():
         pygame.display.flip()
         controls.events(gun)
         gun.update_gun()
-        gun.update_gun2()
 
 run()

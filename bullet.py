@@ -7,8 +7,8 @@ class Bullet(pygame.sprite.Sprite):
 
         super(Bullet, self).__init__()
         self.screen = screen
-        self.rect = pygame.Rect(0,0,2,12)
-        self.color = 120,0,120
+        self.rect = pygame.Rect(0,0,60,60)
+        self.color = 255,230,0
         self.speed = 3
         self.rect.centerx = gun.rect.centerx
         self.rect.top = gun.rect.top

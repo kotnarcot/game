@@ -16,6 +16,9 @@ def events(screen,gun, bullets):
                 gun.kup = True
             elif event.key == pygame.K_s:
                 gun.kdown = True
+            elif event.key == pygame.K_SPACE:
+                new_bullet = Bullet(screen, gun)
+                bullets.add(new_bullet)
 
         elif event.type == pygame.KEYUP:
             if event.key == pygame.K_d:
@@ -29,6 +32,8 @@ def events(screen,gun, bullets):
 
 def update(bg_color, screen, gun, bullets):
     screen.fill(bg_color)
+    for bullet in bullets.sprites():
+        bullet.drawBullet()
     gun.output()
     pygame.display.flip()
 

@@ -1,27 +1,35 @@
 import sys
 import pygame
+from bullet import Bullet
 
-def events(gun):
+
+def events(screen,gun, bullets):
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_d:
                 gun.kright = True
-            if event.key == pygame.K_a:
+            elif event.key == pygame.K_a:
                 gun.kleft = True
-            if event.key == pygame.K_w:
+            elif event.key == pygame.K_w:
                 gun.kup = True
-            if event.key == pygame.K_s:
+            elif event.key == pygame.K_s:
                 gun.kdown = True
-
 
         elif event.type == pygame.KEYUP:
             if event.key == pygame.K_d:
                 gun.kright = False
-            if event.key == pygame.K_a:
+            elif event.key == pygame.K_a:
                 gun.kleft = False
-            if event.key == pygame.K_w:
+            elif event.key == pygame.K_w:
                 gun.kup = False
-            if event.key == pygame.K_s:
+            elif event.key == pygame.K_s:
                 gun.kdown = False
+
+def update(bg_color, screen, gun, bullets):
+    screen.fill(bg_color)
+    gun.output()
+    pygame.display.flip()
+
+

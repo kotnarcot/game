@@ -11,10 +11,8 @@ def run():
     gun = Gun(screen)
 
     while True:
-        screen.fill(bg_color)
-        gun.output()
-        pygame.display.flip()
-        controls.events(gun)
+        controls.events(screen,gun)
         gun.update_gun()
+        controls.update(bg_color,screen,gun)
 
 run()

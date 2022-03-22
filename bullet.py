@@ -4,6 +4,7 @@ import pygame
 class Bullet(pygame.sprite.Sprite):
 
     def __init__(self,screen,gun):
+
         super(Bullet, self).__init__()
         self.screen = screen
         self.rect = pygame.Rect(0,0,2,12)

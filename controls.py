@@ -16,9 +16,13 @@ def events(screen,gun, bullets):
                 gun.kup = True
             elif event.key == pygame.K_s:
                 gun.kdown = True
+                pygame.mixer.music.stop()
             elif event.key == pygame.K_SPACE:
                 new_bullet = Bullet(screen, gun)
                 bullets.add(new_bullet)
+                pygame.mixer.music.load('1.mp3')
+                pygame.mixer.music.play(-1)
+
 
         elif event.type == pygame.KEYUP:
             if event.key == pygame.K_d:
